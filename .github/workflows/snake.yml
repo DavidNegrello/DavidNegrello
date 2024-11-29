@@ -1,0 +1,41 @@
+name: Generate Snake Animation
+
+on:
+  schedule:
+    # Esegue il workflow ogni giorno alle 00:00
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Clona il repository
+      - name: Clona il repository
+        uses: actions/checkout@v2
+
+      # Scarica lo script per generare lo snake
+      - name: Configura ambiente Python
+        run: |
+          sudo apt-get update
+          sudo apt-get install python3-pip -y
+          pip install requests matplotlib pillow
+
+      # Genera il file SVG con l'animazione Snake
+      - name: Genera l'animazione dello Snake
+        uses: Platane/snk@v2
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          output: dist/github-contribution-grid-snake.svg
+
+      # Aggiungi l'animazione generata al repository
+      - name: Aggiorna e committa l'animazione
+        run: |
+          mkdir -p dist
+          mv github-contribution-grid-snake.svg dist/
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add dist/github-contribution-grid-snake.svg
+          git commit -m "Aggiorna animazione Snake" || echo "Nessuna modifica"
+          git push
