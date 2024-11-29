@@ -19,5 +19,7 @@ Mi chiamo **[David]**, e sono un appassionato di sviluppo software, tecnologia e
 
 ![Linguaggi più usati](https://github-readme-stats.vercel.app/api/top-langs/?username=DavidNegrello&layout=compact&theme=radical)
 
+![GitHub Snake Animation](https://raw.githubusercontent.com/TUO-USERNAME/DavidNegrello/output/github-contribution-grid-snake.svg)
+
 
 ⭐️ Sentiti libero di esplorare i miei repository e contribuire!
