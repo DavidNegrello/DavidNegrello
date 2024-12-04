@@ -8,22 +8,21 @@ on:
 
 jobs:
   generate:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     steps:
       # Clona il repository
       - name: Clona il repository
         uses: actions/checkout@v2
 
-      # Usa l'azione Platane/snk per generare l'animazione
-      - name: Genera l'animazione dello Snake
+      # Genera l'animazione dello Snake
+      - name: Genera l'animazione Snake
         uses: Platane/snk@v2
         with:
           github_user_name: ${{ github.repository_owner }}
-          output: dist/github-contribution-grid-snake.svg
 
-      # Aggiungi e committa il file generato
-      - name: Aggiorna il file Snake
+      # Pubblica il file generato
+      - name: Pubblica l'animazione generata
         run: |
           mkdir -p dist
           mv github-contribution-grid-snake.svg dist/
