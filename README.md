@@ -21,7 +21,7 @@ Mi chiamo **[David]**, e sono un appassionato di sviluppo software, tecnologia e
 
 ## 🐍 GitHub Snake Animation
 
-![Snake animation](https://raw.githubusercontent.com/DavidNegrello/DavidNegrello/dist/github-contribution-grid-snake.svg)
+![snake gif](https://github.com/DavidNegrello/DavidNegrello/blob/output/github-snake-dark.svg)
 
 
 ⭐️ Sentiti libero di esplorare i miei repository e contribuire!
