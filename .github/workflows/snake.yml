@@ -11,21 +11,21 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      # Clona il repository
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      # Esegui l'azione Platane/snk per generare l'animazione Snake
+      - name: Create dist folder
+        run: mkdir -p dist
+
+      # Genera l'animazione Snake
       - name: Generate Snake Animation
         uses: Platane/snk@v3.2.0
         with:
           github_user_name: ${{ github.repository_owner }}
-          outputs: |
-            dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+          outputs: dist/github-contribution-grid-snake.svg
 
       # Verifica che i file siano stati generati correttamente
       - name: Ensure the generated file exists
         run: |
           ls dist
           test -f dist/github-contribution-grid-snake.svg
-          test -f dist/github-contribution-grid-snake-dark.svg
