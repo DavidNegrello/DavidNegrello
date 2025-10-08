@@ -6,7 +6,7 @@ Mi chiamo **[David]**, e sono un appassionato di sviluppo software, tecnologia e
 
 - 🌱 Attualmente sto imparando: **[C-JS-PHP-MYSQL]**   
 - 💻 Competenze: **[Tecnologie principali]**  
-- 🎯 Obiettivi: **[Comprendere meglio se concentrarmi nel frontend o backend]**  
+- 🎯 Obiettivi: **[Concentrarmi nel frontend ]**  
 
 ## 🛠️ Progetti recenti
 
